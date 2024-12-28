@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Medicamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Medicamento</h1>
+    </header>
+    <main>
+        <form id="formMedicamento">
+            <label for="id">ID:</label>
+            <input type="text" id="id" required>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+            <label for="prescricao">Prescrição:</label>
+            <input type="text" id="prescricao" required>
+            <label for="preco">Preço:</label>
+            <input type="number" id="preco" required>
+            <label for="quantidade">Quantidade Entrada:</label>
+            <input type="number" id="quantidadeEntrada" required>
+            <label for="quantidadeSaida">Quantidade Saída:</label>
+            <input type="number" id="quantidadeSaida" required>
+            <label for="status">Status:</label>
+            <select id="status">
+                <option value="Disponível">Disponível</option>
+                <option value="Faltoso">Faltoso</option>
+                <option value="Estoque crítico">Estoque crítico</option>
+            </select>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </main>
+    <script>
+        function navigateBack() {
+            window.location.href = 'minhaPagina-index.html';
+            window.location.href = 'sobre.html';
+        }
+    </script>
+</body>
+</html>

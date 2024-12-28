@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscar Medicamentos</title>
+  <link rel="stylesheet" href="buscar-styles.css">
+</head>
+<body>
+  <header>
+    <h1>Central de Medicamentos - Busca</h1>
+  </header>
+  <main>
+    <table id="medicamentos-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Quantidade</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Dados preenchidos pelo JavaScript -->
+      </tbody>
+    </table>
+  </main>
+  <script>
+    // Busca de medicamentos via API
+    fetch('http://localhost:3000/api/medicamentos')
+      .then(response => response.json())
+      .then(data => {
+        const tbody = document.querySelector('#medicamentos-table tbody');
+        data.forEach(medicamento => {
+          const row = `
+            <tr>
+              <td>${medicamento.id}</td>
+              <td>${medicamento.nome}</td>
+              <td>${medicamento.quantidade}</td>
+              <td>${medicamento.status}</td>
+            </tr>`;
+          tbody.innerHTML += row;
+        });
+      })
+      .catch(err => console.error('Erro ao buscar medicamentos:', err));
+  </script>
+  <header>
+    <h2>Detalhes do Cadastro de medicamentos 103</h2>
+  </header>
+  
+  <main>
+    <p>Esta págia 2024/0003 está vinculado a Central Farmácia Diná's-RS. Este refere-se a central de busca por medicamentos: ID, nome, quantidade e status.</p>
+    <button onclick="navigateBack()">Voltar para a Tabela</button>
+  </main>
+
+  <script>
+    function navigateBack() {
+      window.location.href = 'sobre.html';
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

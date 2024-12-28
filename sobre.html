@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nós</title>
+  <link rel="stylesheet" href="sobre-styles.css">
+</head>
+<body>
+  <header>
+    <h1>Sobre Nós</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Nossa Missão</h2>
+      <p>Garantir que medicamentos essenciais estejam acessíveis a todos, com transparência e eficiência.</p>
+    </section>
+    <section>
+      <h2>Equipe</h2>
+      <img src="src/img/equipe.png" width="250" height="200" alt="equipe">
+      <ul>
+        <li>Bella Costa - Gerente de Operações</li>
+        <li>Paula - Farmacêutica Responsável</li>
+        <li>João Lucas - Desenvolvedor de Sistemas</li>
+      </ul>
+    </section>
+  </main>  
+  
+  <main>
+    <section>
+      <h2>Tabela de Central de Medicamentos</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>IdCentralMedicamentos</th>
+            <th>Nome da Central</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Farmácia Bella's-PR</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Farmácia Reis's-SC</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Farmácia Diná's-RS</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Central de Farmácia Araújo's-BA "Matriz"</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Tabela de Cadastro</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>IdCadastro</th>
+            <th>NumeroCadastro</th>
+            <th>IdCentralMedicamentos</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>101</td>
+            <td>2024/0001</td>
+            <td>1</td>
+            <td><button onclick="navigateToCadastro('101')">Ver Cadastro</button></td>
+          </tr>
+          <tr>
+            <td>102</td>
+            <td>2024/0002</td>
+            <td>2</td>
+            <td><button onclick="navigateToCadastro('102')">Ver Cadastro</button></td>
+          </tr>
+          <tr>
+            <td>103</td>
+            <td>2024/0003</td>
+            <td>3</td>
+            <td><button onclick="navigateToCadastro('103')">Ver Cadastro</button></td>
+          </tr>
+          <tr>
+            <td>104</td>
+            <td>2024/0004</td>
+            <td>4</td>
+            <td><button onclick="navigateToCadastro('104')">Ver Central</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

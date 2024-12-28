@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Central de Medicamentos - Login</title>
+  <link rel="stylesheet" href="central-styles.css">
+</head>
+<body>
+  <header>
+    <h1>Central de Medicamentos</h1>
+  </header>
+  <main>
+    <form id="login-form">
+      <h2>Login</h2>
+      <label for="username">Usuário:</label>
+      <input type="text" id="username" name="username" required>
+      
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password" required>
+      
+      <label for="role">Tipo de Usuário:</label>
+      <select id="role" name="role">
+        <option value="cliente">Cliente</option>
+        <option value="admin">Administrador</option>
+      </select>
+      
+      <button type="button" onclick="login()">Entrar</button>
+    </form>
+  </main>
+  <div class="carrossel">
+    <div class="slide">Medicamento 1: Disponível</div>
+    <div class="slide">Medicamento 2: Faltoso</div>
+    <div class="slide">Medicamento 3: Estoque Crítico</div>
+  </div>
+  
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+  
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = i === index ? 'block' : 'none';
+      });
+    }
+  
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+  
+    setInterval(nextSlide, 3000);
+    showSlide(currentSlide);
+  </script>
+
+  <script src="img-index.html"></script>
+    <footer>
+        Desenvolvido por: Belisnalva Costa
+        <a href="https://belisnalvacosta.github.io/New-farm" target="_blank" alt="github">GitHub</a>
+    </footer>
+  <script src="script.js"></script>
+</body>
+</html>

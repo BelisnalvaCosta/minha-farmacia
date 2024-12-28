@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Cliente</title>
+  <link rel="stylesheet" href="cliente-styles.css">
+</head>
+<body>
+  <header>
+    <h1>Cadastro de Cliente</h1>
+  </header>
+  <main>
+    <form id="cadastro-cliente-form">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required>
+      
+      <button type="button" onclick="cadastrarCliente()">Cadastrar</button>
+    </form>
+  </main>
+  <header>
+    <h1>Detalhes do Cadastro 101</h1>
+  </header>
+  
+  <main>
+    <p>O cadastro 2024/0001 está vinculado com o Cliente e a Central de Farmácia Bella's-PR. Este sistema está integrado ao banco de dados, refere-se a consulta de medicamentos disponível.</p>
+    <button onclick="navigateBack()">Voltar para a Tabela</button>
+  </main>
+
+  <script>
+    function navigateBack() {
+      window.location.href = 'sobre.html';    
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
