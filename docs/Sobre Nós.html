@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://127.0.0.1:5500/Farmacia-interativa/sobre.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nós</title>
+  <link rel="stylesheet" href="./Sobre Nós_files/sobre-styles.css">
+<meta id="acfifjfajpekbmhmjppnmmjgmhjkildl"></head>
+<body>
+  <header>
+    <h1>Sobre Nós</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="http://127.0.0.1:5500/Farmacia-interativa/sobre.html#nossa-missao">Nossa Missão</a></li>
+      <li><a href="http://127.0.0.1:5500/Farmacia-interativa/sobre.html#equipe">Equipe</a></li>
+      <li><a href="http://127.0.0.1:5500/Farmacia-interativa/sobre.html#central-medicamentos">Central de Medicamento</a></li>
+      <li><a href="http://127.0.0.1:5500/Farmacia-interativa/sobre.html#tabela-cadastro">Tabela de Cadastro</a></li>      
+      <li><a href="https://belisnalvacosta.github.io/New-farm" target="_blank" alt="github">Carrossel Imagens</a></li>
+      <li><a href="http://127.0.0.1:5500/Farmacia-interativa/sobre.html#fontes">Fontes</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="nossa-missao">
+      <h2>Nossa Missão</h2>
+      <p>Garantir que medicamentos essenciais estejam acessíveis a todos, com transparência e eficiência.</p>
+    </section>
+    <section id="equipe">
+      <h2>Equipe</h2>
+      <img src="./Sobre Nós_files/equipe.png" width="250" height="200" alt="equipe">
+      <ul>
+        <li>Bella Costa - Gerente de Operações</li>
+        <li>Paula - Farmacêutica Responsável</li>
+        <li>João Lucas - Desenvolvedor de Sistemas</li>
+        <li>Têm mais integrantes - Desenvolvedores de Sistemas</li>
+      </ul>
+    </section>
+  </main>  
+  
+  <main>
+    <section id="central-medicamentos">
+      <h2>Tabela de Central de Medicamentos</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>IdCentralMedicamentos</th>
+            <th>Nome da Central</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Farmácia Bella's-PR</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Farmácia Reis's-SC</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Farmácia Diná's-RS</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Central de Farmácia Araújo's-BA "Matriz"</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="tabela-cadastro">
+      <h2>Tabela de Cadastro</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>IdCadastro</th>
+            <th>NumeroCadastro</th>
+            <th>IdCentralMedicamentos</th>
+            <th>Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>101</td>
+            <td>2024/0001</td>
+            <td>1</td>
+            <td><button onclick="navigateToCadastro(101)">Ver Cadastro</button></td>
+          </tr>
+          <tr>
+            <td>102</td>
+            <td>2024/0002</td>
+            <td>2</td>
+            <td><button onclick="navigateToCadastro(102)">Ver Cadastro</button></td>
+          </tr>
+          <tr>
+            <td>103</td>
+            <td>2024/0003</td>
+            <td>3</td>
+            <td><button onclick="navigateToCadastro(103)">Ver Cadastro</button></td>
+          </tr>
+          <tr>
+            <td>104</td>
+            <td>2024/0004</td>
+            <td>4</td>
+            <td><button onclick="navigateToCadastro(104)">Ver Central</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <script src="./Sobre Nós_files/script.js.download"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

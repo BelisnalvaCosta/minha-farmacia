@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)http://127.0.0.1:5500/Farmacia-interativa/minhaPagina-index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmácia Interativa</title>
+    <link rel="stylesheet" href="./Farmácia Interativa_files/style.css">
+    <script defer="" src="./Farmácia Interativa_files/script.js.download"></script>
+<meta id="acfifjfajpekbmhmjppnmmjgmhjkildl"></head>
+<body>
+    <header>
+        <h1>Bem-vindo à Farmácia Interativa</h1>
+        <nav>
+            <a href="http://127.0.0.1:5500/Farmacia-interativa/sobre.html">Sobre</a>
+            <a href="http://127.0.0.1:5500/Farmacia-interativa/cadastro_cliente.html">Cadastro de Cliente</a>
+            <a href="http://127.0.0.1:5500/Farmacia-interativa/cadastro_medicamento.html">Cadastro de Medicamentos</a>
+            <a href="http://127.0.0.1:5500/Farmacia-interativa/central_medicamentos.html">Central de Medicamentos</a>
+            <a href="http://127.0.0.1:5500/Farmacia-interativa/buscar_medicamento.html">Buscar Medicamento</a>
+        </nav>
+    </header>
+    
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Imagens de Medicamentos</title>
+        <style>
+            /* Estilos básicos para o carrossel */
+            .carrossel {
+                display: flex;
+                overflow: hidden;
+                width: 300px;
+                margin: 0 auto;
+                position: relative;
+            }
+    
+            .carrossel-img {
+                display: flex;
+                width: 100%;
+                transition: transform 0.5s ease-in-out;
+            }
+    
+            .imagem-container {
+                min-width: 100%;
+                text-align: center;
+            }
+    
+            .imagem-container img {
+                width: 200px;
+                height: 200px;
+            }
+    
+            .imagem-container h3, .imagem-container p {
+                margin: 5px 0;
+            }
+    
+            /* Botões de navegação */
+            .navegacao {
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                transform: translateY(-50%);
+            }
+    
+            .navegacao button {
+                background-color: rgba(0, 0, 0, 0.5);
+                color: #fff;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+            }
+        </style>
+    
+    
+        <h1>Produtos Farmacêuticos</h1>        
+        <div class="carrossel">
+            <div class="carrossel-img" style="transform: translateX(-300%);">
+                <!-- Imagens e informações dos medicamentos -->
+                <div class="imagem-container" data-produto="amoxilina">
+                <img src="./Farmácia Interativa_files/amoxilina.png" alt="amoxilina">                
+                    <h3>Amoxicilina</h3>
+                    <p>Prescrição: Sim</p>
+                    <p>Estoque: 40 unidades</p>
+                    <p>Preço: R$ 12,00</p>
+                </div>
+                <div class="imagem-container" data-produto="cimegripe">
+                    <img src="./Farmácia Interativa_files/cimegripe.png" alt="cimegripe">                    
+                    <h3>Cimegripe</h3>
+                    <p>Prescrição: Não</p>
+                    <p>Estoque: 60 unidades</p>
+                    <p>Preço: R$ 8,50</p>
+                </div>
+                <div class="imagem-container" data-produto="dorflex"> 
+                    <img src="./Farmácia Interativa_files/dorflex.png" alt="dorflex">               
+                    <h3>Dorflex</h3>
+                    <p>Prescrição: Não</p>
+                    <p>Estoque: 50 unidades</p>
+                    <p>Preço: R$ 10,00</p>
+                </div>
+                <div class="imagem-container" data-produto="dipirona">
+                    <img src="./Farmácia Interativa_files/dipirona.png" alt="dipirona">               
+                    <h3>Dipirona</h3>
+                    <p>Prescrição: Não</p>
+                    <p>Estoque: 80 unidades</p>
+                    <p>Preço: R$ 5,00</p>
+                </div>
+                <div class="imagem-container" data-produto="luftal">
+                    <img src="./Farmácia Interativa_files/luftal.png" alt="luftal">
+                    <h3>Luftal</h3>
+                    <p>Prescrição: Não</p>
+                    <p>Estoque: 35 unidades</p>
+                    <p>Preço: R$ 7,00</p>
+                </div>
+            </div>
+    
+            <!-- Botões de navegação do carrossel -->
+            <div class="navegacao">
+                <button onclick="navegarCarrossel(-1)">❮</button>
+                <button onclick="navegarCarrossel(1)">❯</button>
+            </div>
+        </div>
+    
+        <script>
+            let indiceAtual = 0;
+    
+            function navegarCarrossel(direcao) {
+                const carrossel = document.querySelector('.carrossel-img');
+                const totalImagens = carrossel.children.length;
+    
+                // Atualiza o índice
+                indiceAtual = (indiceAtual + direcao + totalImagens) % totalImagens;
+    
+                // Move o carrossel para a próxima imagem
+                carrossel.style.transform = `translateX(-${indiceAtual * 100}%)`;
+            }
+    
+            // Carrossel automático com intervalo de 4 segundos
+            setInterval(() => navegarCarrossel(1), 4000);
+        </script><br>
+        <div class="carrossel">
+            <div class="slide" style="display: none;">Medicamento 1: Disponível</div>
+            <div class="slide" style="display: block;">Medicamento 2: Faltoso</div>
+            <div class="slide" style="display: none;">Medicamento 3: Estoque Crítico</div>
+          </div>
+          
+          <script>
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slide');
+          
+            function showSlide(index) {
+              slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+              });
+            }
+          
+            function nextSlide() {
+              currentSlide = (currentSlide + 1) % slides.length;
+              showSlide(currentSlide);
+            }
+          
+            setInterval(nextSlide, 3000);
+            showSlide(currentSlide);
+          </script>
+          <script src="./Farmácia Interativa_files/img-index.html"></script>
+        <footer>
+            Desenvolvido por: Belisnalva Costa
+            <a href="https://belisnalvacosta.github.io/New-farm" target="_blank" alt="github">GitHub</a>
+        </footer>
+
+    <main>
+        <section id="carrossel" style="transform: translateX(-300%);">
+            <img src="./Farmácia Interativa_files/amoxilina.png" width="150" height="240" alt="Medicamento 1">
+            <img src="./Farmácia Interativa_files/dipirona.png" width="150" height="240" alt="Medicamento 2">
+            <img src="./Farmácia Interativa_files/luftal.png" width="150" height="240" alt="Medicamento 3">
+            <img src="./Farmácia Interativa_files/cimegripe.png" width="150" height="240" alt="Medicamento 4">
+        </section>
+    </main>        
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
