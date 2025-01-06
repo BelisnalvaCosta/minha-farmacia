@@ -4,16 +4,40 @@ body {
     padding: 0;
     background: #f9f9f9;
 }
-  
+
 header {
-    background: #007bff;
+    text-align: center;
+    background: #026cd6;
     color: white;
     padding: 1rem;
-    text-align: center;
+    /*padding: 20px 10px; */
 }
+  
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background: #333;
+    margin: 0;
+    padding: 10px;
+}
+  
+nav ul li {
+    margin: 0 10px;
+}
+  
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+/* abaixo anteriores*/
   
 main {
     padding: 2rem;
+}
+
+section {
+    margin-bottom: 30px;
 }
   
 form {
@@ -47,4 +71,11 @@ button {
   
 button:hover {
     background: #0056b3;
+}
+
+footer {
+    text-align: center;
+    background: #0365c6;
+    color: #fff;
+    padding: 10px 0;
 }
